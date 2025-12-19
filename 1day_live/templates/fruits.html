@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과일 리스트</title>
+</head>
+<body>
+    <ul>
+        {% for fruit in fruits %}
+            {% if fruit == "멜론" %}
+                <li> 🍎 {{ fruit }} 좋아!</li>
+            {% else %}
+                <li>{{ fruit }} 글쎄;;</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>

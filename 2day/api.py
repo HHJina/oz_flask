@@ -42,6 +42,7 @@ class Book(MethodView):
         global books
         book = next((book for book in books if book['id'] == book_id), None)
         if book is None:
+            
             abort(404, message="Book not found.")
         books = [book for book in books if book['id'] != book_id]
         return ''

@@ -11,8 +11,6 @@ class User(db.Model):
     email = db.Column(db.String(100), unique=True, nullable=False)
     boards = db.relationship('Board', back_populates='author', lazy='dynamic')
 
-	# address = db.Column(db.String(120), unique=True, nullable=False)  # 추가된 필드
-
     # 디버깅용
     def __repr__(self):
         return f'<User {self.name}>'
